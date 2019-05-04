@@ -1,21 +1,22 @@
 
 public class Box
 {
-    double length;
-    double width;
-    double height;
-    double volume;
-    double surfaceArea;
-        
-    public double getVolume()
+    private double length, width, height;
+    
+    public Box(double boxLength, double boxWidth, double boxHeight)
     {
-      volume = length * width * height;
-      return volume;  
+        length = boxLength;
+        width = boxWidth;
+        height = boxHeight;
     }
     
-     public double getSurfaceArea()
+    public double volume()
     {
-      surfaceArea = length + width + height;
-      return volume;  
+        return length * width * height;
+    }
+    
+    public double surfaceArea()
+    {
+        return 2 * (length*width + length*height + width*height);
     }
 }
